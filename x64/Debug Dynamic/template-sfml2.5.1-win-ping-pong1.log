@@ -52,5 +52,4 @@ c:\test2\100spichek\main.cpp(98): warning C4305: аргумент: усечен�
 c:\test2\100spichek\main.cpp(103): warning C4305: аргумент: усечение из "double" в "float"
 c:\test2\100spichek\main.cpp(108): warning C4305: аргумент: усечение из "double" в "float"
 c:\test2\100spichek\main.cpp(113): warning C4305: аргумент: усечение из "double" в "float"
-c:\test2\100spichek\main.cpp(134): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   template-sfml2.5.1-win-ping-pong1.vcxproj -> C:\test2\100spichek\x64\Debug Dynamic\100 spichek.exe

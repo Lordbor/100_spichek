@@ -73,7 +73,7 @@ int main()
 {
 
 	
-	
+	Player = 1;
 	sf::RenderWindow window(sf::VideoMode(640, 400), "Kychka-pc.ru 31");
 	window.setFramerateLimit(60);
 	menu(window);//вызов меню
@@ -128,6 +128,25 @@ int main()
 			if (event.type == sf::Event::Closed)
 				window.close();
 
+				if (event.type == sf::Event::MouseButtonReleased)
+				{
+					if (event.mouseButton.button == sf::Mouse::Left)
+					{
+						if (gameNum == 1 && Player == 1) {
+							InitialCount = InitialCount - 1;
+							Player = 2;
+
+						}
+						else
+						{
+							InitialCount = InitialCount - 1;
+							Player = 1;
+						}
+					}
+
+
+				}
+			
 		}
 
 		
@@ -137,45 +156,24 @@ int main()
 		window.draw(sprite);
 		window.draw(sprite_kucha1);
 		window.draw(sp_INPUTs);
+		if (sf::IntRect(100, 30, 200, 200).contains(sf::Mouse::getPosition(window))) { gameNum = 1; }
+
+		if (Player == 1) {
+			window.draw(sp_menuplayer);
+			window.draw(sp_player1);
+
+		}
+		if (Player == 2) {
+			window.draw(sp_menuplayer);
+			window.draw(sp_player2);
+
+		}
+	
+
+		
 		
 	
-		srand(time(0));
-		system("cls");
-		Player = 1;
-	/*	do {
 
-			if (Player == 1) {
-
-					window.draw(sp_menuplayer);
-					window.draw(sp_player1);
-					if (sf::IntRect(100, 30, 250, 50).contains(sf::Mouse::getPosition(window))) gameNum = 1; 
-					if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-					{
-						if (gameNum == 1) {
-							InitialCount = InitialCount - 1;
-							Player = 2;
-							
-						}
-					}
-				 
-			}
-			
-			if (Player == 2) {
-				
-					window.draw(sp_menuplayer);
-					window.draw(sp_player2);
-					if (sf::IntRect(100, 30, 250, 50).contains(sf::Mouse::getPosition(window))) gameNum = 1;
-					if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-					{
-						if (gameNum == 1) {
-							InitialCount = InitialCount - 1;
-							Player = 1;
-
-						}
-					}
-				
-			}
-		} while (InitialCount > 0);*/
 
 	
 		window.display();
