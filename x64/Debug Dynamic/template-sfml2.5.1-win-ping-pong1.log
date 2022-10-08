@@ -1,0 +1,25 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v150\Microsoft.CppBuild.targets(391,5): warning MSB8028: промежуточный каталог (x64\Debug Dynamic\) содержит файлы, которые используются совместно с другим проектом (template-sfml2.5.1-win-ping-pong1.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  Скопировано файлов:         1.
+  Скопировано файлов:         1.
+  Скопировано файлов:         1.
+  Скопировано файлов:         1.
+  Скопировано файлов:         1.
+  Скопировано файлов:         1.
+  Подпапка или файл C:\test2\100spichek\x64\Debug Dynamic\resources уже существует.
+  C:\test2\100spichek\resources\ball.wav
+  C:\test2\100spichek\resources\bumaga.png
+  C:\test2\100spichek\resources\fon1.png
+  C:\test2\100spichek\resources\fon_menu.png
+  C:\test2\100spichek\resources\Inkulinati-Regular.otf
+  C:\test2\100spichek\resources\Knopka.png
+  C:\test2\100spichek\resources\namr_game.png
+  C:\test2\100spichek\resources\sansation.ttf
+  C:\test2\100spichek\resources\spichka_1.png
+  C:\test2\100spichek\resources\spichka_5.png
+  Скопировано файлов:        10.
+  main.cpp
+c:\test2\100spichek\main.cpp(37): warning C4305: аргумент: усечение из "double" в "float"
+c:\test2\100spichek\main.cpp(40): warning C4305: аргумент: усечение из "double" в "float"
+c:\test2\100spichek\main.cpp(43): warning C4305: аргумент: усечение из "double" в "float"
+c:\test2\100spichek\main.cpp(88): warning C4305: аргумент: усечение из "double" в "float"
+  template-sfml2.5.1-win-ping-pong1.vcxproj -> C:\test2\100spichek\x64\Debug Dynamic\100 spichek.exe
