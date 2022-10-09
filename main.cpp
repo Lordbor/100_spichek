@@ -138,9 +138,6 @@ int main()
 	/*font.loadFromFile("resources/Inkulinati-Regular.otf");
 	Start_game.setFont(font);*/
 
-	std::string str;
-	sf::String text;
-
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -150,7 +147,7 @@ int main()
 			window.close();
 			if (event.type == sf::Event::MouseButtonReleased)
 			{
-				if (event.mouseButton.button == sf::Mouse::Left)
+				if (event.mouseButton.button == sf::Mouse::Left && sf::IntRect(82, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
 				{
 					if (gameNum == 1 && Player == 1) 
 					{
@@ -163,6 +160,123 @@ int main()
 						Player = 1;
 					}
 				}
+				if (event.mouseButton.button == sf::Mouse::Left && sf::IntRect(122, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+				{
+					if (gameNum == 2 && Player == 1)
+					{
+						InitialCount = InitialCount - 2;
+						Player = 2;
+					}
+					else
+					{
+						InitialCount = InitialCount - 2;
+						Player = 1;
+					}
+				}
+				if (event.mouseButton.button == sf::Mouse::Left && sf::IntRect(162, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+				{
+					if (gameNum == 3 && Player == 1)
+					{
+						InitialCount = InitialCount - 3;
+						Player = 2;
+					}
+					else
+					{
+						InitialCount = InitialCount - 3;
+						Player = 1;
+					}
+				}
+				if (event.mouseButton.button == sf::Mouse::Left && sf::IntRect(207, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+				{
+					if (gameNum == 4 && Player == 1)
+					{
+						InitialCount = InitialCount - 4;
+						Player = 2;
+					}
+					else
+					{
+						InitialCount = InitialCount - 4;
+						Player = 1;
+					}
+				}
+				if (event.mouseButton.button == sf::Mouse::Left && sf::IntRect(257, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+				{
+					if (gameNum == 5 && Player == 1)
+					{
+						InitialCount = InitialCount - 5;
+						Player = 2;
+					}
+					else
+					{
+						InitialCount = InitialCount - 5;
+						Player = 1;
+					}
+				}
+				if (event.mouseButton.button == sf::Mouse::Left && sf::IntRect(297, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+				{
+					if (gameNum == 6 && Player == 1)
+					{
+						InitialCount = InitialCount - 6;
+						Player = 2;
+					}
+					else
+					{
+						InitialCount = InitialCount - 6;
+						Player = 1;
+					}
+				}
+				if (event.mouseButton.button == sf::Mouse::Left && sf::IntRect(347, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+				{
+					if (gameNum == 7 && Player == 1)
+					{
+						InitialCount = InitialCount - 7;
+						Player = 2;
+					}
+					else
+					{
+						InitialCount = InitialCount - 7;
+						Player = 1;
+					}
+				}
+				if (event.mouseButton.button == sf::Mouse::Left && sf::IntRect(390, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+				{
+					if (gameNum == 8 && Player == 1)
+					{
+						InitialCount = InitialCount - 8;
+						Player = 2;
+					}
+					else
+					{
+						InitialCount = InitialCount - 8;
+						Player = 1;
+					}
+				}
+				if (event.mouseButton.button == sf::Mouse::Left && sf::IntRect(450, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+				{
+					if (gameNum == 9 && Player == 1)
+					{
+						InitialCount = InitialCount - 9;
+						Player = 2;
+					}
+					else
+					{
+						InitialCount = InitialCount - 9;
+						Player = 1;
+					}
+				}
+				if (event.mouseButton.button == sf::Mouse::Left && sf::IntRect(490, 303, 58, 75).contains(sf::Mouse::getPosition(window)))
+				{
+					if (gameNum == 10 && Player == 1)
+					{
+						InitialCount = InitialCount - 10;
+						Player = 2;
+					}
+					else
+					{
+						InitialCount = InitialCount - 10;
+						Player = 1;
+					}
+				}
 			}
 		}
 
@@ -171,8 +285,26 @@ int main()
 		window.draw(sprite_kucha1);
 		window.draw(sp_INPUTs);
 
-		if (sf::IntRect(100, 30, 200, 200).contains(sf::Mouse::getPosition(window))) 
+		if (sf::IntRect(82, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
 			gameNum = 1;
+		if (sf::IntRect(122, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+			gameNum = 2;
+		if (sf::IntRect(162, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+			gameNum = 3;
+		if (sf::IntRect(207, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+			gameNum = 4;
+		if (sf::IntRect(257, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+			gameNum = 5;
+		if (sf::IntRect(297, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+			gameNum = 6;
+		if (sf::IntRect(347, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+			gameNum = 7;
+		if (sf::IntRect(390, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+			gameNum = 8;
+		if (sf::IntRect(450, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
+			gameNum = 9;
+		if (sf::IntRect(490, 303, 58, 75).contains(sf::Mouse::getPosition(window)))
+			gameNum = 10;
 
 		if (Player == 1) 
 		{
