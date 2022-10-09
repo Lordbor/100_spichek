@@ -1,6 +1,5 @@
 
 #include <SFML/Graphics.hpp>
-
 #include <iostream>
 #include <locale.h>
 #include <ctime>
@@ -8,6 +7,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
 #include <string>
+
 sf::RenderWindow window;
 sf::Image image, image2, kucka1, INPUTs, menuplayer, player1, player2;
 sf::Texture texture, texture2, tex_kucka1, tex_INPUTs, tex_menuplayer, tex_player1, tex_player2;
@@ -20,40 +20,67 @@ bool Correct;
 int menuNum = 0;
 int gameNum = 0;
 
-void menu(sf::RenderWindow & window) {
-	sf::Texture menuTexture1, menuTexture2, menuTexture3, aboutTexture, menuBackground;
-	menuTexture1.loadFromFile("resources/Knopka.png");
-	menuTexture3.loadFromFile("resources/Exit.png");
-	aboutTexture.loadFromFile("resources/namr_game.png");
-	menuBackground.loadFromFile("resources/fon_menu.png");
-	sf::Sprite menu1, menu2, menu3, about, menuBg;
+void menu(sf::RenderWindow & window) 
+{
+	sf::Texture menuTexture1, menuTexture2, aboutTexture, menuBackground;
+	sf::Sprite menu1, menu2, about, menuBg;
 
 	bool isMenu = 1;
 	int menuNum = 0;
+
+	//ÇÀÃĞÓÇÊÀ ÒÅÊÑÒÓĞ
+	menuTexture1.loadFromFile("resources/Knopka.png");
+	menuTexture2.loadFromFile("resources/Exit.png");
+	aboutTexture.loadFromFile("resources/namr_game.png");
+	menuBackground.loadFromFile("resources/fon_menu.png");
+	
+	// ÎÁÚßÂËÅÍÈÅ ÊÍÎÏÊÈ "ÍÀ×ÒÜ ÈÃĞÓ"
 	menu1.setTexture(menuTexture1);
 	menu1.setPosition(100, 30);
 	menu1.setScale(0.167, 0.167);
-	menu3.setTexture(menuTexture3);
-	menu3.setPosition(100, 150);
-	menu3.setScale(0.167, 0.167);
+
+	// ÎÁÚßÂËÅÍÈÅ ÊÍÎÏÊÈ "ÂÛÕÎÄ ÈÇ ÈÃĞÛ"
+	menu2.setTexture(menuTexture2);
+	menu2.setPosition(100, 150);
+	menu2.setScale(0.167, 0.167);
+
+	// ÇÀÃĞÓÇÊÀ ÔÎÍÀ ÄËß ÌÅÍŞ
 	menuBg.setTexture(menuBackground);
 	menuBg.setPosition(0, 0);
 	menuBg.setScale(0.167, 0.167);
+
 	while (isMenu)
 	{
 		menu1.setColor(sf::Color::White);
-		menu3.setColor(sf::Color::White);
+		menu2.setColor(sf::Color::White);
 		menuNum = 0;
 		window.clear(sf::Color(129, 181, 221));
 
-		if (sf::IntRect(100, 30, 250, 50).contains(sf::Mouse::getPosition(window))) { menu1.setColor(sf::Color::Blue); menuNum = 1; }
-		if (sf::IntRect(100, 150, 250, 50).contains(sf::Mouse::getPosition(window))) { menu3.setColor(sf::Color::Blue); menuNum = 3; }
+		//ÏĞÎÈÑÕÎÄÈÒ ÏÎÄÑÒÂÅÒÊÀ ÏĞÈ ÍÀÂÅÄÅÍÈÅ ÍÀ ÊÍÎÏÊÓ "ÍÀ×ÀÒÜ ÈÃĞÓ"
+		if (sf::IntRect(100, 30, 250, 50).contains(sf::Mouse::getPosition(window))) 
+		{ 
+			menu1.setColor(sf::Color::Blue); 
+			menuNum = 1; 
+		}
 
+		//ÏĞÎÈÑÕÎÄÈÒ ÏÎÄÑÒÂÅÒÊÀ ÏĞÈ ÍÀÂÅÄÅÍÈÅ ÍÀ ÊÍÎÏÊÓ "ÂÛÕÎÄ"
+		if (sf::IntRect(100, 150, 250, 50).contains(sf::Mouse::getPosition(window))) 
+		{ 
+			menu2.setColor(sf::Color::Blue); 
+			menuNum = 2; 
+		}
+
+		//ÑÎÁÛÒÈß ÍÀÆÀÒÈß ÍÀ "ËÊÌ"
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 		{
-			if (menuNum == 1) isMenu = false; //åñëè íàæàëè ïåğâóş êíîïêó, òî âûõîäèì èç ìåíş 
-			if (menuNum == 3) { window.close(); isMenu = false; }
+			if (menuNum == 1)	//ÂÛÊËŞ×ÈÒÜ ÎÊÍÎ Ñ "ÌÅÍŞ" ÄËß ÄÀËÜÍÅÉØÅÃÎ ÇÀÏÓÑÊÀ ÏĞÎÃĞÀÌÌÛ
+				isMenu = false; 
 
+			if (menuNum == 2)	//ÂÛÊËŞ×ÈÒÜ ÏĞÎÃĞÀÌÌÓ
+			{ 
+				window.close(); 
+				isMenu = false; 
+			}
 		}
 		sf::Event event;
 		while (window.pollEvent(event))
@@ -64,17 +91,14 @@ void menu(sf::RenderWindow & window) {
 		window.draw(menuBg);
 		window.draw(menu1);
 		window.draw(menu2);
-		window.draw(menu3);
 
 		window.display();
 	}
 }
 int main()
 {
-
-	
 	Player = 1;
-	sf::RenderWindow window(sf::VideoMode(640, 400), "Kychka-pc.ru 31");
+	sf::RenderWindow window(sf::VideoMode(640, 400), "Menu");
 	window.setFramerateLimit(60);
 	menu(window);//âûçîâ ìåíş
 	image.loadFromFile("resources/fon1.png"); 
@@ -114,75 +138,55 @@ int main()
 	/*font.loadFromFile("resources/Inkulinati-Regular.otf");
 	Start_game.setFont(font);*/
 
-
 	std::string str;
 	sf::String text;
 
 	while (window.isOpen())
 	{
-		
-		
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
-			if (event.type == sf::Event::Closed)
-				window.close();
-
-				if (event.type == sf::Event::MouseButtonReleased)
+		if (event.type == sf::Event::Closed)
+			window.close();
+			if (event.type == sf::Event::MouseButtonReleased)
+			{
+				if (event.mouseButton.button == sf::Mouse::Left)
 				{
-					if (event.mouseButton.button == sf::Mouse::Left)
+					if (gameNum == 1 && Player == 1) 
 					{
-						if (gameNum == 1 && Player == 1) {
-							InitialCount = InitialCount - 1;
-							Player = 2;
-
-						}
-						else
-						{
-							InitialCount = InitialCount - 1;
-							Player = 1;
-						}
+						InitialCount = InitialCount - 1;
+						Player = 2;
 					}
-
-
+					else
+					{
+						InitialCount = InitialCount - 1;
+						Player = 1;
+					}
 				}
-			
+			}
 		}
-
-		
-
 
 		window.clear(sf::Color::Black);
 		window.draw(sprite);
 		window.draw(sprite_kucha1);
 		window.draw(sp_INPUTs);
-		if (sf::IntRect(100, 30, 200, 200).contains(sf::Mouse::getPosition(window))) { gameNum = 1; }
 
-		if (Player == 1) {
+		if (sf::IntRect(100, 30, 200, 200).contains(sf::Mouse::getPosition(window))) 
+			gameNum = 1;
+
+		if (Player == 1) 
+		{
 			window.draw(sp_menuplayer);
 			window.draw(sp_player1);
-
 		}
-		if (Player == 2) {
+
+		if (Player == 2) 
+		{
 			window.draw(sp_menuplayer);
 			window.draw(sp_player2);
-
 		}
-	
 
-		
-		
-	
-
-
-	
 		window.display();
 	} 
 	return 0;
 }
-
-
-
-	
-
-	
