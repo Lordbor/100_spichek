@@ -156,7 +156,7 @@ int main()
 		window.draw(sprite);
 		window.draw(sprite_kucha1);
 		window.draw(sp_INPUTs);
-		if (sf::IntRect(100, 30, 200, 200).contains(sf::Mouse::getPosition(window))) { gameNum = 1; }
+		if (sf::IntRect(100, 30, 50, 50).contains(sf::Mouse::getPosition(window))) { gameNum = 1; }
 
 		if (Player == 1) {
 			window.draw(sp_menuplayer);
