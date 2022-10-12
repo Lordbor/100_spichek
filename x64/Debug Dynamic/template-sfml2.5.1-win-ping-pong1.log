@@ -1,5 +1,4 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v150\Microsoft.CppBuild.targets(391,5): warning MSB8028: промежуточный каталог (x64\Debug Dynamic\) содержит файлы, которые используются совместно с другим проектом (template-sfml2.5.1-win-ping-pong1.vcxproj).  Это может привести к ошибкам очистки и перестроения.
-  Скопировано файлов:         1.
+﻿  Скопировано файлов:         1.
   Скопировано файлов:         1.
   Скопировано файлов:         1.
   Скопировано файлов:         1.
@@ -43,13 +42,13 @@
   C:\test2\100spichek\resources\Бумажка.png
   Скопировано файлов:        35.
   main.cpp
-c:\test2\100spichek\main.cpp(35): warning C4305: аргумент: усечение из "double" в "float"
-c:\test2\100spichek\main.cpp(38): warning C4305: аргумент: усечение из "double" в "float"
-c:\test2\100spichek\main.cpp(41): warning C4305: аргумент: усечение из "double" в "float"
-c:\test2\100spichek\main.cpp(88): warning C4305: аргумент: усечение из "double" в "float"
-c:\test2\100spichek\main.cpp(93): warning C4305: аргумент: усечение из "double" в "float"
-c:\test2\100spichek\main.cpp(98): warning C4305: аргумент: усечение из "double" в "float"
-c:\test2\100spichek\main.cpp(103): warning C4305: аргумент: усечение из "double" в "float"
-c:\test2\100spichek\main.cpp(108): warning C4305: аргумент: усечение из "double" в "float"
-c:\test2\100spichek\main.cpp(113): warning C4305: аргумент: усечение из "double" в "float"
+C:\test2\100spichek\main.cpp(44,29): warning C4305: аргумент: усечение из "double" в "float"
+C:\test2\100spichek\main.cpp(49,29): warning C4305: аргумент: усечение из "double" в "float"
+C:\test2\100spichek\main.cpp(54,30): warning C4305: аргумент: усечение из "double" в "float"
+C:\test2\100spichek\main.cpp(125,30): warning C4305: аргумент: усечение из "double" в "float"
+C:\test2\100spichek\main.cpp(130,37): warning C4305: аргумент: усечение из "double" в "float"
+C:\test2\100spichek\main.cpp(135,33): warning C4305: аргумент: усечение из "double" в "float"
+C:\test2\100spichek\main.cpp(140,37): warning C4305: аргумент: усечение из "double" в "float"
+C:\test2\100spichek\main.cpp(145,34): warning C4305: аргумент: усечение из "double" в "float"
+C:\test2\100spichek\main.cpp(150,34): warning C4305: аргумент: усечение из "double" в "float"
   template-sfml2.5.1-win-ping-pong1.vcxproj -> C:\test2\100spichek\x64\Debug Dynamic\100 spichek.exe
