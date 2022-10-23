@@ -1,11 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <locale.h>
-#include <ctime>
-#include <cstdlib>
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
-#include <string>
 #include "start.h"
 #include "game.h"
 
@@ -45,7 +42,6 @@ void menu(sf::RenderWindow& window)
 		menu1.setColor(sf::Color::White);
 		menu2.setColor(sf::Color::White);
 		menuNum = 0;
-		//
 
 		//ÏĞÎÈÑÕÎÄÈÒ ÏÎÄÑÒÂÅÒÊÀ ÏĞÈ ÍÀÂÅÄÅÍÈÅ ÍÀ ÊÍÎÏÊÓ "ÍÀ×ÀÒÜ ÈÃĞÓ"
 		if (sf::IntRect(100, 30, 250, 50).contains(sf::Mouse::getPosition(window)))
@@ -64,12 +60,12 @@ void menu(sf::RenderWindow& window)
 		//ÑÎÁÛÒÈß ÍÀÆÀÒÈß ÍÀ "ËÊÌ"
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 		{
-			if (menuNum == 1) {	//ÂÛÊËŞ×ÈÒÜ ÎÊÍÎ Ñ "ÌÅÍŞ" ÄËß ÄÀËÜÍÅÉØÅÃÎ ÇÀÏÓÑÊÀ ÏĞÎÃĞÀÌÌÛ
+			if (menuNum == 1)  //ÂÛÊËŞ×ÈÒÜ ÎÊÍÎ Ñ "ÌÅÍŞ" ÄËß ÄÀËÜÍÅÉØÅÃÎ ÇÀÏÓÑÊÀ ÏĞÎÃĞÀÌÌÛ
+			{	
 				isMenu = false;
 				window.clear(sf::Color(129, 181, 221));
 				menuopen = 0;
 			}
-
 			if (menuNum == 2)	//ÂÛÊËŞ×ÈÒÜ ÏĞÎÃĞÀÌÌÓ
 			{
 				window.close();
@@ -79,12 +75,12 @@ void menu(sf::RenderWindow& window)
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
-			if (event.type == sf::Event::Closed) {
+			if (event.type == sf::Event::Closed) 
+			{
 				window.close();
 				exit(0);
 			}
 		}
-
 		window.draw(menuBg);
 		window.draw(menu1);
 		window.draw(menu2);
@@ -97,7 +93,7 @@ int start()
 	HWND hConsole = GetConsoleWindow(); //Åñëè êîìïèëÿòîğ ñòàğûé çàìåíèòü íà GetForegroundWindow()
 	ShowWindow(hConsole, SW_HIDE);      //ïğÿ÷åì îêîíî êîíñîëè
 
-	sf::RenderWindow window(sf::VideoMode(640, 400), "Menu");
+	sf::RenderWindow window(sf::VideoMode(640, 400), "100 ñïè÷åê");
 	window.setFramerateLimit(60);
 
 	while (window.isOpen())
