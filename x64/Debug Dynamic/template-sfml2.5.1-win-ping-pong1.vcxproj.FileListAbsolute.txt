@@ -1,2 +1,1 @@
-D:\folder\programming\shelfs\programms\100_spichek\x64\Debug Dynamic\100 spichek.exe
 C:\test2\100spichek\x64\Debug Dynamic\100 spichek.exe
