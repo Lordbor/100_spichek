@@ -10,9 +10,9 @@
 #include "game.h"
 
 sf::RenderWindow window;
-sf::Image image, image2, kucka1, INPUTs, menuplayer, player1, player2;
-sf::Texture texture, texture2, tex_kucka1, tex_INPUTs, tex_menuplayer, tex_player1, tex_player2;
-sf::Sprite sprite, sprite2, sprite_kucha1, sp_INPUTs, sp_menuplayer, sp_player1, sp_player2;
+sf::Image image, image2, kucka1, INPUTs, menuplayer, player1, player2, fonSchetcik;
+sf::Texture texture, texture2, tex_kucka1, tex_INPUTs, tex_menuplayer, tex_player1, tex_player2, tex_fonSchetcik;
+sf::Sprite sprite, sprite2, sprite_kucha1, sp_INPUTs, sp_menuplayer, sp_player1, sp_player2, sp_fonSchetcik;
 sf::Font font;
 sf::Text text, winner;
 
@@ -28,49 +28,69 @@ void game(sf::RenderWindow& window)
 	window.clear(sf::Color(129, 181, 221));
 	bool isGame = true;
 	InitialCount = 100;
+
+	//‘ŒÕ »√–€
 	image.loadFromFile("resources/fon1.png");
-	image2.loadFromFile("resources/spichka_1.png");
-	kucka1.loadFromFile("resources/kucha1.png");
 	texture.loadFromImage(image);
-	texture2.loadFromImage(image2);
-	tex_kucka1.loadFromImage(kucka1);
 	sprite.setTexture(texture);
 	sprite.setPosition(0, 0);
 	sprite.setScale(0.167, 0.167);
-	sprite2.setTexture(texture2);
-	sprite2.setPosition(50, 50);
+
+	// ”◊¿ —œ»◊≈ 
+	kucka1.loadFromFile("resources/kucha1.png");
+	tex_kucka1.loadFromImage(kucka1);
 	sprite_kucha1.setTexture(tex_kucka1);
 	sprite_kucha1.setPosition(270, 150);
 	sprite_kucha1.setScale(0.167, 0.167);
+
+	// ÕŒœ » ¬€¡Œ–¿  ŒÀ»◊≈—“¬¿ —œ»◊≈  ƒÀﬂ «¿¡Œ–¿
 	INPUTs.loadFromFile("resources/INPUT.png");
 	tex_INPUTs.loadFromImage(INPUTs);
 	sp_INPUTs.setTexture(tex_INPUTs);
 	sp_INPUTs.setPosition(70, 300);
 	sp_INPUTs.setScale(0.167, 0.167);
+
+	//‘ŒÕ ƒÀﬂ »√–Œ Œ¬
 	menuplayer.loadFromFile("resources/bumplayer.png");
 	tex_menuplayer.loadFromImage(menuplayer);
 	sp_menuplayer.setTexture(tex_menuplayer);
 	sp_menuplayer.setPosition(70, 70);
 	sp_menuplayer.setScale(0.167, 0.167);
+
+	//—œ–¿…“ ¬“Œ–Œ√Œ »√–Œ ¿
 	player1.loadFromFile("resources/player1.png");
 	tex_player1.loadFromImage(player1);
 	sp_player1.setTexture(tex_player1);
 	sp_player1.setPosition(80, 80);
 	sp_player1.setScale(0.167, 0.167);
+
+	//—œ–¿…“ œ≈–¬Œ√Œ »√–Œ ¿
 	player2.loadFromFile("resources/player2.png");
 	tex_player2.loadFromImage(player2);
 	sp_player2.setTexture(tex_player2);
 	sp_player2.setPosition(80, 80);
 	sp_player2.setScale(0.167, 0.167);
-	font.loadFromFile("resources/Inkulinati-Regular.otf");
+
+	//Œ¡⁄ﬂ¬Àﬂ≈Ã “»œ ÿ–»‘“¿
+	font.loadFromFile("resources/text.otf");
+
+	//—◊®“◊» 
+	fonSchetcik.loadFromFile("resources/bumplayer.png");
+	tex_fonSchetcik.loadFromImage(fonSchetcik);
+	sp_fonSchetcik.setTexture(tex_fonSchetcik);
+	sp_fonSchetcik.setPosition(255, 78);
+	sp_fonSchetcik.setScale(0.137, 0.167);
+	//“≈ —“ —◊®“◊» ¿
 	text.setFont(font);
-	text.setCharacterSize(28);
+	text.setCharacterSize(48);
 	text.setFillColor(sf::Color::Black);
-	text.setPosition(320, 100);
+	text.setPosition(280, 75);
+	
+	//“≈ —“ œŒ¡≈ƒ»“≈Àﬂ
 	winner.setFont(font);
 	winner.setCharacterSize(40);
 	winner.setFillColor(sf::Color::Black);
-	winner.setPosition(200, 100);
+	winner.setPosition(170, 80);
 
 	while (isGame) 
 	{
@@ -78,6 +98,7 @@ void game(sf::RenderWindow& window)
 		window.draw(sprite);
 		window.draw(sprite_kucha1);
 		window.draw(sp_INPUTs);
+		window.draw(sp_fonSchetcik);
 		window.draw(text);
 
 		sf::Event event;

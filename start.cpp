@@ -1,11 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <locale.h>
-#include <ctime>
-#include <cstdlib>
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
-#include <string>
 #include "start.h"
 #include "game.h"
 
