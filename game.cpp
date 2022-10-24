@@ -22,7 +22,7 @@ bool Correct;
 int menuNum = 0;
 int gameNum = 0;
 
-void game(sf::RenderWindow& window) 
+void game(sf::RenderWindow& window)
 {
 	Player = 1;
 	window.clear(sf::Color(129, 181, 221));
@@ -91,14 +91,14 @@ void game(sf::RenderWindow& window)
 	text.setCharacterSize(48);
 	text.setFillColor(sf::Color::Black);
 	text.setPosition(280, 75);
-	
+
 	//рейяр онаедхрекъ
 	winner.setFont(font);
 	winner.setCharacterSize(40);
 	winner.setFillColor(sf::Color::Black);
 	winner.setPosition(170, 80);
 
-	while (isGame) 
+	while (isGame)
 	{
 		window.clear(sf::Color::Black);
 		window.draw(sprite);
@@ -106,12 +106,12 @@ void game(sf::RenderWindow& window)
 		window.draw(sp_INPUTs);
 		window.draw(sp_fonSchetcik);
 		window.draw(text);
-	
+
 		sf::Event event;
 
 		while (window.pollEvent(event))
 		{
-			if (event.type == sf::Event::Closed) 
+			if (event.type == sf::Event::Closed)
 			{
 				window.close();
 				exit(0);
@@ -251,7 +251,7 @@ void game(sf::RenderWindow& window)
 			}
 			text.setString(std::to_string(InitialCount));
 		}
-		if (sf::IntRect(100, 30, 50, 50).contains(sf::Mouse::getPosition(window))) 
+		if (sf::IntRect(100, 30, 50, 50).contains(sf::Mouse::getPosition(window)))
 			gameNum = 1;
 		if (sf::IntRect(82, 303, 42, 75).contains(sf::Mouse::getPosition(window)))
 			gameNum = 1;
