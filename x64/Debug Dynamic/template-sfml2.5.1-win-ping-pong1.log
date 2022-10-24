@@ -1,1 +1,59 @@
-﻿
+﻿  Скопировано файлов:         1.
+  Скопировано файлов:         1.
+  Скопировано файлов:         1.
+  Скопировано файлов:         1.
+  Скопировано файлов:         1.
+  Скопировано файлов:         1.
+  D:\folder\programming\shelfs\programms\100_spichek\resources\0.png
+  Подпапка или файл D:\folder\programming\shelfs\programms\100_spichek\x64\Debug Dynamic\resources уже существует.
+  D:\folder\programming\shelfs\programms\100_spichek\resources\1.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\2.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\3.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\4.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\5.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\6.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\7.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\8.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\9.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\ball.wav
+  D:\folder\programming\shelfs\programms\100_spichek\resources\bumaga.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\bumplayer.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\Exit.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\fon1.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\fon_menu.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\INPUT.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\Knopka.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\kucha1.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\namr_game.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\player1.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\player2.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\sansation.ttf
+  D:\folder\programming\shelfs\programms\100_spichek\resources\spichka_1.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\spichka_10.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\spichka_2.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\spichka_3.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\spichka_4.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\spichka_5.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\spichka_6.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\spichka_7.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\spichka_8.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\spichka_9.png
+  D:\folder\programming\shelfs\programms\100_spichek\resources\text.otf
+  D:\folder\programming\shelfs\programms\100_spichek\resources\Бумажка.png
+  Скопировано файлов:        35.
+  main.cpp
+  game.cpp
+D:\folder\programming\shelfs\programms\100_spichek\game.cpp(37,30): warning C4305: аргумент: усечение из "double" в "float"
+D:\folder\programming\shelfs\programms\100_spichek\game.cpp(44,37): warning C4305: аргумент: усечение из "double" в "float"
+D:\folder\programming\shelfs\programms\100_spichek\game.cpp(50,34): warning C4305: аргумент: усечение из "double" в "float"
+D:\folder\programming\shelfs\programms\100_spichek\game.cpp(57,33): warning C4305: аргумент: усечение из "double" в "float"
+D:\folder\programming\shelfs\programms\100_spichek\game.cpp(64,37): warning C4305: аргумент: усечение из "double" в "float"
+D:\folder\programming\shelfs\programms\100_spichek\game.cpp(71,34): warning C4305: аргумент: усечение из "double" в "float"
+D:\folder\programming\shelfs\programms\100_spichek\game.cpp(78,34): warning C4305: аргумент: усечение из "double" в "float"
+D:\folder\programming\shelfs\programms\100_spichek\game.cpp(88,38): warning C4305: аргумент: усечение из "double" в "float"
+  start.cpp
+D:\folder\programming\shelfs\programms\100_spichek\start.cpp(28,29): warning C4305: аргумент: усечение из "double" в "float"
+D:\folder\programming\shelfs\programms\100_spichek\start.cpp(33,29): warning C4305: аргумент: усечение из "double" в "float"
+D:\folder\programming\shelfs\programms\100_spichek\start.cpp(38,30): warning C4305: аргумент: усечение из "double" в "float"
+  Создание кода...
+  template-sfml2.5.1-win-ping-pong1.vcxproj -> D:\folder\programming\shelfs\programms\100_spichek\x64\Debug Dynamic\100 spichek.exe
