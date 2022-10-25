@@ -16,70 +16,85 @@ sf::Sprite sprite, sprite2, sprite_kucha1, sp_INPUTs, sp_menuplayer, sp_player1,
 sf::Font font;
 sf::Text text, winner;
 
-int InitialCount = 100;
-int Count, Num, Player;
-bool Correct;
-int menuNum = 0;
-int gameNum = 0;
-
-void game(sf::RenderWindow& window)
+bool funFonGame()
 {
-	Player = 1;
-	window.clear(sf::Color(129, 181, 221));
-	bool isGame = true;
-	InitialCount = 100;
-
 	//‘ŒÕ »√–€
 	image.loadFromFile("resources/fon1.png");
 	texture.loadFromImage(image);
 	sprite.setTexture(texture);
 	sprite.setPosition(0, 0);
-	sprite.setScale(0.167, 0.167);
+	sprite.setScale(0.167f, 0.167f);
+	sf::Vector2u num = image.getSize();
+	return true;
+}
 
+void funKychaSpichek()
+{
 	// ”◊¿ —œ»◊≈ 
 	kucka1.loadFromFile("resources/kucha1.png");
 	tex_kucka1.loadFromImage(kucka1);
 	sprite_kucha1.setTexture(tex_kucka1);
 	sprite_kucha1.setPosition(270, 150);
 	sprite_kucha1.setScale(0.167, 0.167);
+}
 
+void funSpichka()
+{
 	//—œ»◊ ¿
 	spichka.loadFromFile("resources/spichka_1.png");
 	tex_spichka.loadFromImage(spichka);
 	sp_spichka.setTexture(tex_spichka);
 	sp_spichka.setScale(0.167, 0.167);
+}
 
+void funKnopki()
+{
 	// ÕŒœ » ¬€¡Œ–¿  ŒÀ»◊≈—“¬¿ —œ»◊≈  ƒÀﬂ «¿¡Œ–¿
 	INPUTs.loadFromFile("resources/INPUT.png");
 	tex_INPUTs.loadFromImage(INPUTs);
 	sp_INPUTs.setTexture(tex_INPUTs);
 	sp_INPUTs.setPosition(70, 300);
 	sp_INPUTs.setScale(0.167, 0.167);
+}
 
+void funFonPlayers()
+{
 	//‘ŒÕ ƒÀﬂ »√–Œ Œ¬
 	menuplayer.loadFromFile("resources/bumplayer.png");
 	tex_menuplayer.loadFromImage(menuplayer);
 	sp_menuplayer.setTexture(tex_menuplayer);
 	sp_menuplayer.setPosition(70, 70);
 	sp_menuplayer.setScale(0.167, 0.167);
+}
 
+void funSpTwoPlayer()
+{
 	//—œ–¿…“ ¬“Œ–Œ√Œ »√–Œ ¿
 	player1.loadFromFile("resources/player1.png");
 	tex_player1.loadFromImage(player1);
 	sp_player1.setTexture(tex_player1);
 	sp_player1.setPosition(80, 80);
 	sp_player1.setScale(0.167, 0.167);
+}
 
+void funSpOnePlayer()
+{
 	//—œ–¿…“ œ≈–¬Œ√Œ »√–Œ ¿
 	player2.loadFromFile("resources/player2.png");
 	tex_player2.loadFromImage(player2);
 	sp_player2.setTexture(tex_player2);
 	sp_player2.setPosition(80, 80);
 	sp_player2.setScale(0.167, 0.167);
+}
 
+void funFont()
+{
 	//Œ¡⁄ﬂ¬Àﬂ≈Ã “»œ ÿ–»‘“¿
 	font.loadFromFile("resources/text.otf");
+}
 
+void funSchetchik()
+{
 	//—◊®“◊» 
 	fonSchetcik.loadFromFile("resources/bumplayer.png");
 	tex_fonSchetcik.loadFromImage(fonSchetcik);
@@ -91,12 +106,45 @@ void game(sf::RenderWindow& window)
 	text.setCharacterSize(48);
 	text.setFillColor(sf::Color::Black);
 	text.setPosition(280, 75);
+}
 
+void funTxtWinner()
+{
 	//“≈ —“ œŒ¡≈ƒ»“≈Àﬂ
 	winner.setFont(font);
 	winner.setCharacterSize(40);
 	winner.setFillColor(sf::Color::Black);
 	winner.setPosition(170, 80);
+}
+
+void loadGame()
+{
+	funFonGame();
+	funKychaSpichek();
+	funSpichka();
+	funKnopki();
+	funFonPlayers();
+	funSpTwoPlayer();
+	funSpOnePlayer();
+	funFont();
+	funSchetchik();
+	funTxtWinner();
+}
+
+void game(sf::RenderWindow& window)
+{
+	int InitialCount = 100;
+	int Count, Num, Player;
+	bool Correct;
+	int menuNum = 0;
+	int gameNum = 0;
+	bool isGame = true;
+
+	Player = 1;
+
+	window.clear(sf::Color::Black);
+
+	loadGame();
 
 	while (isGame)
 	{

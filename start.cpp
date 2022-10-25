@@ -93,7 +93,7 @@ int start()
 	HWND hConsole = GetConsoleWindow(); //Если компилятор старый заменить на GetForegroundWindow()
 	ShowWindow(hConsole, SW_HIDE);      //прячем оконо консоли
 
-	sf::RenderWindow window(sf::VideoMode(640, 400), "100 спичек");
+	sf::RenderWindow window(sf::VideoMode(640, 400), L"100 спичек");
 	window.setFramerateLimit(60);
 
 	while (window.isOpen())

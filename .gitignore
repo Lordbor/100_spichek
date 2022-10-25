@@ -138,6 +138,8 @@ StyleCopReport.xml
 # Chutzpah Test files
 _Chutzpah*
 
+UnitTests/x64/ *.*
+
 # Visual C++ cache files
 ipch/
 *.aps
